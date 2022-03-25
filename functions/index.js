@@ -18,8 +18,7 @@ exports.removeExpiredReservation =
         console.log("removeExpiredReservation run");
         const db = admin.firestore();
         const now = firestore.Timestamp.now();
-        // const ts = firestore.Timestamp.fromMillis(now.toMillis() - 3600000);
-        const ts = firestore.Timestamp.fromMillis(now.toMillis() - 180000);
+        const ts = firestore.Timestamp.fromMillis(now.toMillis() - 3600000);
 
         const promises = [];
         const readingRoom = db.collection("ReadingRoom");
